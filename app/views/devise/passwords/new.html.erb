@@ -1,0 +1,22 @@
+<div class="row">
+  
+  <div class="col-md-6 col-md-offset-3 text-center">
+    
+    <h2>Forgot Your Password</h2>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render 'shared/devisemessage' %>
+
+      <div class="form-group">
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Send Me Password Instructions", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
+
